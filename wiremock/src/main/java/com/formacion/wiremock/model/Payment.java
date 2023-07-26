@@ -7,12 +7,12 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.formacion.wiremock.IbanDeserializer;
 import org.iban4j.Iban;
 
-
 public class Payment {
     @JsonDeserialize(using = IbanDeserializer.class)
     private Iban debtor;
     @JsonDeserialize(using = IbanDeserializer.class)
     private Iban creditor;
+
     private BigDecimal amount;
     public Payment() {
     }
