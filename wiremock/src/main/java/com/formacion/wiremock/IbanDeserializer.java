@@ -1,6 +1,7 @@
 package com.formacion.wiremock;
 
 import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import org.iban4j.Iban;
@@ -13,20 +14,11 @@ import java.lang.reflect.Method;
 public class IbanDeserializer extends JsonDeserializer<Iban> {
 
     @Override
-    public Iban deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
-        String ibanString = p.getText().trim();
-        return createIban(ibanString);
-    }
-
-    private Iban createIban(String ibanString) {
-        try {
-            Method method = Iban.class.getDeclaredMethod("valueOf", String.class);
-            method.setAccessible(true);
-            return (Iban) method.invoke(null, ibanString);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
+    public Iban deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
+            throws IOException, JsonProcessingException {
+        String iban = jsonParser.getText();
+        Iban ibanObject = iban != null ? Iban.valueOf(iban) : null;
+        return ibanObject;
     }
 }
 
