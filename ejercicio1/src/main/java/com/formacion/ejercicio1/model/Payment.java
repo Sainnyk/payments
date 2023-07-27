@@ -2,9 +2,18 @@ package com.formacion.ejercicio1.model;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.formacion.ejercicio1.IbanDeserializer;
 import org.iban4j.Iban;
 
 public class Payment {
+    @JsonDeserialize(using = IbanDeserializer.class)
+    private Iban debtor;
+    @JsonDeserialize(using = IbanDeserializer.class)
+    private Iban creditor;
+
+    private BigDecimal amount;
     public Payment() {
     }
 
@@ -14,9 +23,6 @@ public class Payment {
         this.amount = amount;
     }
 
-    private Iban debtor;
-    private Iban creditor;
-    private BigDecimal amount;
 
     public Iban getDebtor() {
         return debtor;
@@ -57,3 +63,5 @@ public class Payment {
         return Objects.hash(debtor, creditor, amount);
     }
 }
+
+

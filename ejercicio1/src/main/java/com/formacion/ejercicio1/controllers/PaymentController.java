@@ -19,9 +19,12 @@ public class PaymentController {
         this.paymentService = paymentService;
     }
     @PostMapping
-    public ResponseEntity<String> createPayment(@RequestBody Payment payment){
+    public ResponseEntity<Payment> createPayment(@RequestBody Payment payment){
+        System.out.println(payment.getCreditor());
+        System.out.println(payment.getDebtor());
+        System.out.println(payment.getAmount());
         paymentService.callWiremock(payment);
-        return ResponseEntity.ok("Objeto enviado");
+        return ResponseEntity.ok(payment);
 
     }
 }

@@ -10,7 +10,7 @@ public class ReceiverService {
 
     public void validateIban (Iban creditor) throws Exception {
 
-        if(creditor.getBankCode().equals("0049")) {
+        if(!creditor.getBankCode().equals("0049")) {
             throw new Exception("El IBAN no pertenece al Banco Santander");
         }
     }

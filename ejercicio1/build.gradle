@@ -24,7 +24,7 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 	implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'
 
-	implementation 'org.iban4j:iban4j:1.0.0'
+	implementation 'org.iban4j:iban4j:3.2.4-RELEASE'
 
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
