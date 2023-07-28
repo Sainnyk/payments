@@ -16,8 +16,10 @@ public class IbanDeserializer extends JsonDeserializer<Iban> {
     @Override
     public Iban deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
             throws IOException, JsonProcessingException {
+        System.out.println("Deserializer: "+jsonParser.getText());
         String iban = jsonParser.getText();
         Iban ibanObject = iban != null ? Iban.valueOf(iban) : null;
+        System.out.println("Deserializer: "+ ibanObject.toFormattedString());
         return ibanObject;
     }
 }

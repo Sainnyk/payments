@@ -4,13 +4,17 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.formacion.wiremock.IbanDeserializer;
+import com.formacion.wiremock.IbanSerializer;
 import org.iban4j.Iban;
 
 public class Payment {
     @JsonDeserialize(using = IbanDeserializer.class)
+    @JsonSerialize(using = IbanSerializer.class)
     private Iban debtor;
     @JsonDeserialize(using = IbanDeserializer.class)
+    @JsonSerialize(using = IbanSerializer.class)
     private Iban creditor;
 
     private BigDecimal amount;

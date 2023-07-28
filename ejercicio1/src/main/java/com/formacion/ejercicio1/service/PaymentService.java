@@ -13,7 +13,12 @@ public class PaymentService {
     }
 
     public ResponseEntity<String> callWiremock(Payment payment) {
-         feignClient.sendData(payment);
+        System.out.println("SERVICE:");
+        System.out.println(payment.getCreditor());
+        System.out.println(payment.getDebtor());
+        System.out.println(payment.getAmount());
+        feignClient.sendData(payment);
+        System.out.println("Enviado a wiremock");
          return ResponseEntity.ok("Enviado correctamente");
     }
 
