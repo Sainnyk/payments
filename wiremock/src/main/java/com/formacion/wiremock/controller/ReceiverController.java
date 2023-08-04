@@ -22,7 +22,7 @@ public class ReceiverController {
         System.out.println(payment.getDebtor());
         System.out.println(payment.getAmount());
         System.out.println("Info recibidad");
-        receiverService.validateIban(payment.getCreditor());
+        //receiverService.validateIban(payment.getCreditor());
         return ResponseEntity.ok(payment);
     }
 }

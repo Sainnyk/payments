@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.formacion.wiremock.ReceiverControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-07-31T10:37:03" hostname="GSPNXTTx226399M" time="0.475">
+  <properties/>
+  <testcase name="getInvalidData()" classname="com.formacion.wiremock.ReceiverControllerTest" time="0.459"/>
+  <testcase name="getValidData()" classname="com.formacion.wiremock.ReceiverControllerTest" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/x226399/.gradle/caches/modules-2/files-2.1/com.github.tomakehurst/wiremock-standalone/3.0.0-beta-8/dd74511a8e51d50ec1b29a71a8682ab286b85541/wiremock-standalone-3.0.0-beta-8.jar!/wiremock/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Ignoring binding found at [jar:file:/Users/x226399/.gradle/caches/modules-2/files-2.1/com.github.tomakehurst/wiremock-jre8-standalone/2.35.0/23fd20992e665b232446cc85f2155410211a2aa7/wiremock-jre8-standalone-2.35.0.jar!/wiremock/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+]]></system-err>
+</testsuite>

@@ -1,25 +1,26 @@
 package com.formacion.ejercicio1.service;
 
 import com.formacion.ejercicio1.model.Payment;
-import org.springframework.http.ResponseEntity;
+import com.formacion.ejercicio1.repository.PaymentRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-
+@Slf4j
 @Service
 public class PaymentService {
     private final ITransmitter feignClient;
-    public PaymentService(ITransmitter feignClient) {
+    private final PaymentRepository repository;
+
+    public PaymentService(ITransmitter feignClient, PaymentRepository repository) {
         this.feignClient = feignClient;
+        this.repository = repository;
     }
 
-    public ResponseEntity<String> callWiremock(Payment payment) {
-        System.out.println("SERVICE:");
-        System.out.println(payment.getCreditor());
-        System.out.println(payment.getDebtor());
-        System.out.println(payment.getAmount());
-        feignClient.sendData(payment);
-        System.out.println("Enviado a wiremock");
-         return ResponseEntity.ok("Enviado correctamente");
+    public void callWiremock(Payment payment) {
+        log.info("Payload received in Service: {}", payment);
+        repository.save(payment);
+        feignClient.validateData(payment.getCreditor());
+        log.info("Payload sent through Service: {}", payment);
     }
 
 
