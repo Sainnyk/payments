@@ -55,7 +55,7 @@ class ReceiverControllerTest {
                 .withRequestBody(matchingJsonPath("$.amount"))
                 .willReturn(aResponse()
                         .withStatus(200)
-                        .withHeader("Content-Type", "application/json");
+                        .withHeader("Content-Type", "application/json")));
                         //.withBody("{ \"status\": \"SUCCESS\" }")));
 
         //Perform the request to this microservice
