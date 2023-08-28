@@ -39,6 +39,10 @@ public class JdbcTemplateConnection {
                 "VALUES (5, 'Susana Gomez', 'ES4502337943000620000000', 'ES', 'Carlos Lopez ', 'ES4502337943000620006699', 45.31, NOW());";
         jdbcTemplate.execute(insertPaymentData);
     }
+    public void deletePayment(){
+        String deletePaymentData="DELETE from payments where id = 7";
+        jdbcTemplate.execute(deletePaymentData);
+    }
     public static void main(String[] args) throws JsonProcessingException {
 
         JdbcConfig config = new JdbcConfig();
@@ -46,7 +50,7 @@ public class JdbcTemplateConnection {
 
         JdbcTemplateConnection jdbcTemplateConnection = new JdbcTemplateConnection(new PaymentRowMapper(),new JdbcTemplate(dataSource));
         //System.out.println(jdbcTemplateConnection.findByIban("ES5300490418450200051333"));
-        jdbcTemplateConnection.addPayment();
+
         System.out.println(jdbcTemplateConnection.findAll());
     }
 }

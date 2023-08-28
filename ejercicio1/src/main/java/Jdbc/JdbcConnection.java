@@ -76,7 +76,8 @@ public class JdbcConnection {
                     }*/
 
 
-                statement.execute(insertPaymentData);
+                statement.execute(deleteTable);
+                statement.execute(deleteTable2);
 
                 //statement.execute(createPaymentsTableSQL);
                // statement.execute(updateUsers);

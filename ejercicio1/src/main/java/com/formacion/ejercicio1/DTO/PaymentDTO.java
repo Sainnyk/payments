@@ -1,24 +1,20 @@
 package com.formacion.ejercicio1.DTO;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.formacion.ejercicio1.IbanDeserializer;
-import com.formacion.ejercicio1.IbanSerializer;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
-import org.iban4j.Iban;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
+
 @Data
-@Builder
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "payments")
 public class PaymentDTO {
-
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
         private int payment_id;

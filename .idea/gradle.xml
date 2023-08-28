@@ -8,6 +8,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/ejercicio1" />
+            <option value="$PROJECT_DIR$/ejercicio1/src" />
+            <option value="$PROJECT_DIR$/ejercicio1/src/test" />
+            <option value="$PROJECT_DIR$/ejercicio1/src/test/resources" />
           </set>
         </option>
       </GradleProjectSettings>

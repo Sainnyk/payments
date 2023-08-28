@@ -1,7 +1,14 @@
 package com.formacion.ejercicio1.repository;
 
-import com.formacion.ejercicio1.model.Payment;
-import org.springframework.data.repository.CrudRepository;
+import com.formacion.ejercicio1.DTO.PaymentDTO;
 
-public interface PaymentRepository extends CrudRepository<Payment, Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface PaymentRepository extends JpaRepository<PaymentDTO, Long> {
+    List<PaymentDTO> findByDebtor(String debtor);
 }

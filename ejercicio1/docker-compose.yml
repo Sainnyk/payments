@@ -1,10 +1,28 @@
+
 services:
   postgres_db:
-    image: postgres
-    ports:
+   image: postgres
+   ports:
       - "5432:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DATABASE=postgres
-      - POSTGRES_HOST_AUTH_METHOD=trust
+   environment:
+     - POSTGRES_USER=postgres
+     - POSTGRES_PASSWORD=postgres
+     - POSTGRES_DATABASE=postgres
+     - POSTGRES_HOST_AUTH_METHOD=trust
+
+
+
+
+
+    #h2_db:
+  #  image: openjdk:17.0.1-jdk-slim
+  # ports:
+  #   - "8081:8081"
+  # environment:
+  #   - SPRING_DATASOURCE_URL=jdbc:h2:mem:h2paymentdockerdb
+  #   - SPRING_DATASOURCE_USERNAME=h2
+  #   - SPRING_DATASOURCE_PASSWORD=
+  # volumes:
+    #   - ./build/libs:/app
+  # command: [ "java", "-jar", "/app/ejercicio1-0.0.1-SNAPSHOT.jar" ]
+

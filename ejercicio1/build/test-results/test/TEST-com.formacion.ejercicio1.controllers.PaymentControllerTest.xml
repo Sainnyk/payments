@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.formacion.ejercicio1.controllers.PaymentControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-08-28T07:21:09" hostname="GSPNXTTx226399M" time="0.52">
+  <properties/>
+  <testcase name="getPaymentsByName()" classname="com.formacion.ejercicio1.controllers.PaymentControllerTest" time="0.52"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.1)
+
+2023-08-28T09:21:01.056+02:00  INFO 25516 --- [    Test worker] c.f.e.controllers.PaymentControllerTest  : Starting PaymentControllerTest using Java 17.0.7 with PID 25516 (started by x226399 in /Users/x226399/Downloads/payments/ejercicio1)
+2023-08-28T09:21:01.061+02:00  INFO 25516 --- [    Test worker] c.f.e.controllers.PaymentControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2023-08-28T09:21:01.906+02:00 DEBUG 25516 --- [    Test worker] o.s.c.openfeign.FeignClientsRegistrar$1  : Identified candidate component class: file [/Users/x226399/Downloads/payments/ejercicio1/build/classes/java/main/com/formacion/ejercicio1/service/ITransmitter.class]
+2023-08-28T09:21:02.119+02:00  INFO 25516 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-28T09:21:02.284+02:00  INFO 25516 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 1 JPA repository interfaces.
+2023-08-28T09:21:02.506+02:00  INFO 25516 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=059acd2f-6673-32c3-bbb3-5ca16c9c8cb5
+2023-08-28T09:21:02.608+02:00 DEBUG 25516 --- [    Test worker] o.s.c.openfeign.FeignClientFactoryBean   : Creating a FeignClientFactoryBean.
+2023-08-28T09:21:02.613+02:00  INFO 25516 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'com.formacion.ejercicio1.service.ITransmitter' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-28T09:21:02.994+02:00  INFO 25516 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.024s)
+2023-08-28T09:21:03.012+02:00  INFO 25516 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
+2023-08-28T09:21:03.012+02:00  INFO 25516 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-08-28T09:21:03.118+02:00  INFO 25516 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-28T09:21:03.195+02:00  INFO 25516 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-08-28T09:21:03.199+02:00  INFO 25516 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-28T09:21:03.348+02:00  INFO 25516 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-28T09:21:03.504+02:00  INFO 25516 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-28T09:21:03.528+02:00  INFO 25516 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-28T09:21:03.557+02:00  INFO 25516 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b465fa9
+2023-08-28T09:21:03.559+02:00  INFO 25516 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-28T09:21:03.835+02:00  INFO 25516 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-28T09:21:04.457+02:00  INFO 25516 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-28T09:21:04.460+02:00  INFO 25516 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-28T09:21:04.565+02:00  WARN 25516 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-28T09:21:05.634+02:00  WARN 25516 --- [    Test worker] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-08-28T09:21:05.659+02:00  INFO 25516 --- [    Test worker] c.f.e.controllers.PaymentControllerTest  : Started PaymentControllerTest in 4.992 seconds (process running for 6.245)
+2023-08-28T09:21:05.709+02:00  INFO 25516 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2023-08-28T09:21:05.904+02:00  INFO 25516 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2023-08-28T09:21:06.186+02:00  INFO 25516 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2023-08-28T09:21:06.188+02:00  INFO 25516 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2023-08-28T09:21:06.207+02:00  INFO 25516 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 24.0.5
+  API Version: 1.43
+  Operating System: Docker Desktop
+  Total Memory: 7859 MB
+2023-08-28T09:21:06.230+02:00  INFO 25516 --- [    Test worker] tc.testcontainers/ryuk:0.5.1             : Creating container for image: testcontainers/ryuk:0.5.1
+2023-08-28T09:21:06.786+02:00  INFO 25516 --- [    Test worker] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2023-08-28T09:21:06.908+02:00  INFO 25516 --- [    Test worker] tc.testcontainers/ryuk:0.5.1             : Container testcontainers/ryuk:0.5.1 is starting: ec971f2cc353735e1d498aadc37e09aa754acb7c8772cb4e3bcbde2e55ff2f0d
+2023-08-28T09:21:07.627+02:00  INFO 25516 --- [    Test worker] tc.testcontainers/ryuk:0.5.1             : Container testcontainers/ryuk:0.5.1 started in PT1.411572S
+2023-08-28T09:21:07.646+02:00  INFO 25516 --- [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2023-08-28T09:21:07.646+02:00  INFO 25516 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2023-08-28T09:21:07.646+02:00  INFO 25516 --- [    Test worker] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2023-08-28T09:21:07.647+02:00  INFO 25516 --- [    Test worker] tc.postgres:13                           : Creating container for image: postgres:13
+2023-08-28T09:21:07.725+02:00  INFO 25516 --- [    Test worker] tc.postgres:13                           : Container postgres:13 is starting: 38e419804bd94ac5de585b860f1d11a18623abb8c82aa66b383e2a27c21fb7c8
+2023-08-28T09:21:09.965+02:00  INFO 25516 --- [    Test worker] tc.postgres:13                           : Container postgres:13 started in PT2.31867S
+2023-08-28T09:21:09.968+02:00  INFO 25516 --- [    Test worker] tc.postgres:13                           : Container is started (JDBC URL: jdbc:postgresql://localhost:58364/dbtest?loggerLevel=OFF)
+2023-08-28T09:21:10.246+02:00  INFO 25516 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.010s)
+2023-08-28T09:21:10.264+02:00  INFO 25516 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
+2023-08-28T09:21:10.265+02:00  INFO 25516 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+[PaymentDTO(id=1, payment_id=1, dbtr_nm=John Doe, debtor=ES4502337953000620004450, dbtr_ctry=ES, cdtr_nm=Silvia Jimenez, creditor=ES5300490418450200051332, amount=4531.31, cre_dt_tm=2023-08-24 09:22:45.517492), PaymentDTO(id=2, payment_id=1, dbtr_nm=John Doe, debtor=ES4502337953000620004450, dbtr_ctry=ES, cdtr_nm=Silvia Jimenez, creditor=ES5300490418450200051332, amount=61.50, cre_dt_tm=2023-08-24 09:22:45.517492), PaymentDTO(id=3, payment_id=5, dbtr_nm=Alison Mcguire, debtor=ES4502337943000620004444, dbtr_ctry=ES, cdtr_nm=Tomas Jacinto, creditor=ES5300490418450200051336, amount=501.38, cre_dt_tm=2023-08-24 09:22:45.517492), PaymentDTO(id=4, payment_id=6, dbtr_nm=Bruny Sambil, debtor=ES4502337943000620001122, dbtr_ctry=ES, cdtr_nm=Julian Campo, creditor=ES5300490418450200051333, amount=231.38, cre_dt_tm=2023-08-24 09:22:45.517492)]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -2,5 +2,8 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/ejercicio1/src/main/java/Jdbc/JdbcConnection.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/ejercicio1/src/main/resources/db/migration/V1__Initial.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/ejercicio1/src/main/resources/db/migration/V2__InsertData.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/ejercicio1/src/main/resources/db/migration/V3__InsertUserData.sql" dialect="GenericSQL" />
   </component>
 </project>

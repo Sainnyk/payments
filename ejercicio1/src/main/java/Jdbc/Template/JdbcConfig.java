@@ -16,9 +16,9 @@ public class JdbcConfig {
         dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
         dataSource.setUsername("postgres");
         dataSource.setPassword("postgres");
-
         return dataSource;
     }
+
     @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource){
 
