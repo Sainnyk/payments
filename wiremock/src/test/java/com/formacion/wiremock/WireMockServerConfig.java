@@ -5,7 +5,7 @@ import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
-
+/*
 public class WireMockServerConfig {
     private static final int PORT = 8089;
 
@@ -27,4 +27,4 @@ public class WireMockServerConfig {
         wireMockServerConfig.startWireMock();
     }
 
-}
+}*/

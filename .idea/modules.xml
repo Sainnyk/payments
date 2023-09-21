@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ejercicio1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ejercicio1.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/payments.iml" filepath="$PROJECT_DIR$/.idea/payments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wiremock.main.iml" filepath="$PROJECT_DIR$/.idea/modules/wiremock.main.iml" />
     </modules>
   </component>
 </project>
